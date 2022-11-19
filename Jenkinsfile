@@ -17,5 +17,13 @@ pipeline {
 				echo 'Building dev'
 			}
         }
+		stage('Build tags') {
+			when{
+				buildingTag()
+			}
+			steps {                
+				echo 'Hello world Building tags'
+			}
+        }
     }
 }
